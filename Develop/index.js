@@ -21,7 +21,11 @@ function writeToFile(fileName, data) {
 }
 
 function init() {
-
+    inquirer
+    .prompt(questions)
+    .then(function({username,repository}){
+        const queryUrl = "https:api.github.com/users/${username}";
+    })
 }
 
 init();
